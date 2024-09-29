@@ -1,30 +1,40 @@
-Self Organizing Map And Anomalies Detection Using Neural Networks On IPL Deliveries Dataset Overview This project implements a Self-Organizing Map (SOM) using neural networks on the IPL Deliveries dataset.
-The tool visualizes the results and identifies anomalies in the dataset.
+## IPL Deliveries Anomaly Detection with SOM (Bash Script)
 
-Hardware Requirements To run this project effectively, ensure that your system meets the following hardware specifications:
+This script installs dependencies, runs the Python script, and organizes outputs.
 
-Processor: Dual-core processor (Intel i3 or equivalent) 
-RAM: Minimum 4GB Disk Space: At least 500MB for the dataset and environment 
-Operating System: Windows, macOS, or any Linux distribution Software Requirements
+**Requirements:**
 
-Ensure you have the following software installed:
+* Linux system with bash shell
+* `pip` installed
 
-Python Version: Python 3.8 or higher Required Libraries The following libraries are required for the project. 
+**Steps:**
 
-Install them using the provided requirements.txt file:
+1. **Clone or Download Project:** Replace `<project_url>` with the actual project URL.
 
-numpy
-pandas
-matplotlib 
-scikit-learn
-minisom 
-   
-Installation Steps Follow these steps to set up the environment and execute the project:
+```bash
+git clone <project_url>
+```
 
-Install Required Libraries Open a terminal and run the following command to install the necessary libraries:
+2. **Install Dependencies:**
 
-pip install -r requirements.txt Run the Main Script Navigate to the directory where the main.py file is located and execute the script:
+```bash
+cd IPL_Deliveries_SOM  # Change directory to project folder
+pip install -r requirements.txt
+```
 
-python src/main.py Output Files Upon successful execution of the program, you will find two visual output files generated in the visuals folder:
+3. **Run Script and Generate Outputs:**
 
-som_u_matrix_deliveries.png: This file contains the visual representation of the Self-Organizing Map. som_with_anomalies_deliveries.png: This file highlights the identified anomalies in the dataset.
+```bash
+python src/main.py
+
+mv som_u_matrix_deliveries.png visuals/  # Move visualization to visuals folder
+mv som_with_anomalies_deliveries.png visuals/
+```
+
+**Explanation:**
+
+* This script assumes the project is cloned or downloaded into a folder named `IPL_Deliveries_SOM`.
+* `pip install -r requirements.txt` installs all necessary libraries listed in the `requirements.txt` file.
+* `python src/main.py` executes the main Python script located in the `src` folder.
+* The `mv` commands move the generated visualization files (`som_u_matrix_deliveries.png` and `som_with_anomalies_deliveries.png`) to a folder named `visuals`. 
+
